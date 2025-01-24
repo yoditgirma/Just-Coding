@@ -19,7 +19,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
       faqItem.classList.add('active');
       icon.src = './images/sell images/icons8-minus-24.png'; // Change to the minus icon
     } else {
-      icon.src = '../images/sell images/plus.png'; // Reset to the plus icon
+      icon.src = './images/sell images/plus.png'; // Reset to the plus icon
     }
   });
 });
