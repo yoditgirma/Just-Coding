@@ -1,0 +1,870 @@
+body {
+  font-family: "Robbins", sans-serif;
+  color: #161e2d;
+}
+
+.link {
+  text-decoration: none;
+  color: #161e2d;
+}
+
+.link .arrow {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, top 0.3s ease, right 0.3s ease;
+}
+
+.link:hover .arrow {
+  transform: translate(5px, -5px); /* Move to top-right */
+}
+
+.learn-more {
+  color: #161e2d;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.learn-more::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #161e2d;
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.3s ease; /*smooth transformation*/
+}
+
+.learn-more:hover::after {
+  transform: scaleX(0); /* Hides the underline */
+}
+
+.gray-color {
+  background-color: #f2f2f2;
+}
+
+/*  header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  display: flex;
+  gap: 5px;
+}
+
+.description a {
+  cursor: pointer;
+}
+
+.signup-btn {
+  padding: 15px 23px 15px 23px;
+  font-size: 15px;
+  border-radius: 100em;
+  border-style: none;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 81, 0, 0.966);
+  cursor: pointer;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.sign-up:hover,
+.signup-btn:hover {
+  transform: scale(1.1); /* Zooms in slightly */
+  z-index: 2;
+}
+
+.description {
+  display: flex;
+}
+
+.description a:hover {
+  text-decoration: underline;
+}
+
+.create-container {
+  display: flex;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.big-txt p {
+  font-size: 5rem;
+  padding-left: 70px;
+  font-weight: 800;
+  color: #232f3e;
+  line-height: 1.2;
+}
+
+.image img {
+  width: 450px;
+  height: 400px;
+  margin-top: 100px;
+}
+
+.sign-up {
+  display: flex;
+  position: relative;
+  bottom: 45px;
+}
+
+.first-div {
+  margin: 0;
+  margin-left: 70px;
+  padding: 20px 45px;
+  font-size: 20px;
+  border-radius: 100em;
+  border-style: none;
+  background-color: rgba(255, 81, 0, 0.966);
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.second-div {
+  border-style: none;
+  font-size: 1em;
+  padding-left: 15px;
+  line-height: 1.5;
+  cursor: pointer;
+  text-align: center;
+}
+
+.text-line {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  padding-left: 25px;
+}
+
+/* section 2 */
+
+.sec-2 {
+  margin-top: 8%;
+}
+
+.get-started-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.get-started {
+  width: 100%;
+  padding-right: 5%;
+  padding-bottom: 15px;
+  margin: 20px;
+}
+
+.img img {
+  width: 550px;
+  height: 500px;
+}
+
+.new-seller {
+  display: flex;
+  align-items: center;
+  width: 13em;
+  border-radius: 20px;
+  padding: 5px;
+  margin-bottom: 0;
+  background-image: url("../images/sell images/Green-400.svg");
+  background-size: cover;
+  background-position: center center;
+  margin: 10px;
+}
+
+.new-seller div span {
+  margin: 5px;
+  padding-left: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+.get-txt {
+  font-size: 45px;
+  line-height: 58px;
+  font-weight: 800;
+  width: 100%;
+  color: #232f3e;
+}
+
+.check-description {
+  width: 95%;
+  background-size: cover;
+  background-position: center center;
+  padding: 20px 30px;
+  margin: 20px 5px;
+  line-height: 1.5;
+  border-radius: 20px;
+  background-image: url("../images/sell images/green-50-bg.svg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.lists {
+  display: flex;
+  gap: 10px;
+}
+
+.lists div span {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.lists div img {
+  width: 20px;
+  height: 20px;
+}
+
+.incentives {
+  display: flex;
+  gap: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.incentives a {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* section 3 */
+
+.sec-3 {
+  background-color: #f2f2f2;
+  margin: 80px;
+  border-radius: 20px;
+}
+
+.purpose-container {
+  display: flex;
+  gap: 10px;
+  margin: 50px;
+  justify-content: end;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+.purpose-question h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: #232f3e;
+}
+
+.purpose-answer {
+  margin-top: -20px;
+}
+
+.list-image {
+  padding-top: 15px;
+}
+
+.list-title {
+  font-size: 20px;
+}
+
+.list-definition {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.5;
+}
+
+.decoration {
+  text-decoration: underline;
+}
+
+.decoration:hover {
+  cursor: pointer;
+}
+
+.links div a {
+  color: #161e2d;
+}
+
+.purpose-list-container {
+  display: flex;
+  gap: 15px;
+  margin: 5px;
+}
+
+.links {
+  display: flex;
+  gap: 5px;
+}
+
+.first-profile {
+  background-image: url("../images/sell images/off-white-light.svg");
+  margin-top: 50px;
+  padding: 50px;
+  margin-left: 4rem;
+  width: 70%;
+  border-radius: 20px;
+  background-size: cover;
+  margin-right: 0;
+}
+
+.profile-comment {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: ABook, Georgia, Times, serif;
+  width: 100%;
+  color: #232f3e;
+}
+
+.profile-picture {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.description-profile {
+  margin: 0;
+  padding: 0;
+}
+
+.job {
+  font-size: 12px;
+  margin-top: -15px;
+}
+
+/* section 4 */
+
+.sec-4 {
+  background-color: #161e2d;
+  border-color: #232f3e;
+  padding: 3em;
+}
+
+.information-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  /* align-content: flex-start;
+    align-items: stretch; */
+}
+
+.number,
+.sales {
+  color: #fff;
+}
+
+.average-sale,
+.percentage {
+  border-right: 1px solid #232f3e;
+  height: 200px;
+}
+
+.average-sale,
+.percentage,
+.countries {
+  width: 33.333333333333336%;
+  padding: 2rem;
+  margin: 5px;
+}
+
+.number {
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+}
+
+.sales {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+/* section 5 */
+
+.sec-5 {
+  background-image: url("../images/sell images/off-white.svg");
+  border-radius: 20px;
+  margin: 5rem;
+  padding: 3rem;
+}
+
+.revenue-calculator-container {
+  display: flex;
+  gap: 40px;
+}
+
+.rev-title h1 {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 900;
+  color: #232f3e;
+}
+
+.rev-para {
+  color: #232f3e;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.rev-lists {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.rev-lists ol li {
+  padding-bottom: 16px;
+}
+
+.rev-link div a {
+  color: #232f3e;
+}
+
+.revenue-image div img {
+  justify-content: center;
+}
+
+/* section 6 */
+
+.sec-6 {
+  background-color: #fff;
+  border-color: #eaeded;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: 5rem;
+  padding: 3rem;
+  margin-top: 100px;
+}
+
+.guideline-container {
+  display: flex;
+  gap: 4rem;
+}
+
+.guide-title h1 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  color: #232f3e;
+  margin-top: 0;
+}
+
+.steps {
+  display: flex;
+  gap: 30px;
+}
+
+.step,
+.s-title {
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #232f3e;
+  text-align: start;
+  width: 30%;
+}
+
+.s-title {
+  width: 70%;
+}
+
+.s-explain,
+.s-list {
+  font-size: 14px;
+  line-height: 21px;
+  color: #6c7778;
+  font-weight: 500;
+}
+
+.s-list {
+  line-height: 30px;
+}
+
+.s-link {
+  color: #6c7778;
+  text-decoration: underline;
+}
+
+.s-links {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.s-lnk {
+  color: #232f3e;
+  text-decoration: none;
+}
+
+.img-1,
+.img-2,
+.img-3 {
+  width: 350px;
+  height: 400px;
+  background-image: url("../images/sell images/selling-plans-mockedup.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin: 0;
+  padding-right: 0;
+  margin-bottom: 20px;
+}
+
+.img-2 {
+  background-image: url("../images/sell images/sellers-664220072.webp");
+}
+
+.img-3 {
+  background-image: url("../images/sell images/Fulfillment_Center_Conveyor_Belt_2.webp");
+}
+
+.space {
+  line-height: 30px;
+}
+
+/* section 7 */
+
+.sec-7 {
+  background-image: url("../images/sell images/off-white.svg");
+  border-radius: 20px;
+  margin: 5rem;
+  padding: 1rem;
+  margin-top: 100px;
+}
+
+.account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.acc-q h3 {
+  font-size: 43px;
+  line-height: 58px;
+  color: #232f3e;
+  font-weight: 900;
+}
+
+/* tools */
+
+.tools {
+  color: #232f3e;
+  margin: 5rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 100px;
+  box-shadow: 0 -0.3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tools h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 43px;
+}
+
+.tools-q {
+  color: #232f3e;
+  margin: 0 11rem;
+  padding: 0 1rem;
+}
+
+.tools-q p {
+  text-align: center;
+  font-size: 20px;
+  color: #6c7778;
+}
+
+/* section 8 */
+
+.sec-8 {
+  /* border-radius: 20px; */
+  margin: 5rem;
+  padding: 1rem;
+  margin-top: 100px;
+}
+
+.customer-container {
+  display: flex;
+  padding: 1rem;
+}
+
+.stick {
+  width: 20%;
+  margin: 0;
+  margin-top: 2em;
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+
+.stick ul {
+  list-style: none;
+}
+
+.lnk {
+  text-decoration: none;
+  color: #6c7778;
+}
+
+.customer-content {
+  width: 100%;
+}
+
+.cust-title {
+  font-size: 31px;
+  font-weight: 800;
+  color: #232f3e;
+}
+
+.cust-title p {
+  text-align: start;
+  padding-left: 100px;
+}
+
+.tools-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-image: url("../images/sell images/off-white.svg");
+  margin: 5rem;
+  margin-top: 0;
+  border-radius: 20px;
+}
+
+.tool-description {
+  background-color: #fff;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.tool-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.tool-link {
+  display: flex;
+  gap: 5px;
+}
+
+.tool-title h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #232f3e;
+}
+
+.tool-para {
+  font-size: 13px;
+  color: #6c7778;
+  line-height: 23px;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.tool-txt {
+  position: relative;
+  top: 40px;
+  padding-right: 0;
+  margin-right: 0;
+  padding-left: 50px;
+  width: 55%;
+}
+
+.tool-txt p {
+  font-size: 26px;
+  line-height: 35px;
+  color: #232f3e;
+}
+
+.alnk {
+  color: #232f3e;
+}
+
+.tools2-container {
+  display: flex;
+  gap: 30px;
+  margin: 0 5rem;
+}
+
+.box {
+  background-color: #fff;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  width: 33.3%;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.t-link {
+  padding-bottom: 70px;
+}
+
+.t-lnk {
+  padding-bottom: 113px;
+}
+
+.box-mrgntop {
+  margin-top: 70px;
+}
+
+/* section 9 */
+
+.sec-9 {
+  margin: 9rem;
+  margin-top: 0;
+}
+
+.FAQ h1 {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 42px;
+  font-weight: 900;
+  color: #232f3e;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #232f3e;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-question img {
+  width: 15px;
+  height: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Answer Section */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.faq-answer p {
+  /* margin: 8px 0; */
+  /* padding-right: 5em; */
+  color: #6c7778;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+/* Expand Effect */
+.faq-item.active .faq-answer {
+  max-height: fit-content;
+  padding: 15px 15px;
+}
+
+.f-lnk {
+  color: #6c7778;
+  cursor: pointer;
+}
+
+.f-ans-list {
+  color: #6c7778;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+/* section 10 */
+.sec-10 {
+  background-image: url("../images/sell images/off-white.svg");
+  border-radius: 20px;
+  margin: 5rem;
+  padding: 1rem;
+  margin-top: 0;
+}
+
+.start-container {
+  display: flex;
+  gap: 50px;
+}
+
+.start-image {
+  background-image: url("../images/sell images/brand-prime-boxes-doorstep-delivery.webp");
+  background-size: cover;
+  background-position: bottom center;
+  width: 70%;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.start-p h1 {
+  padding: 0 2rem;
+  margin: 0;
+  margin-bottom: 30px;
+  color: #161e2d;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.s-sign-up {
+  display: flex;
+  gap: 15px;
+}
+
+.medium-txt h1 {
+  margin: 0;
+  margin-top: 3rem;
+  margin-bottom: 20px;
+  font-size: 56px;
+  font-weight: 900;
+  color: #232f3e;
+  padding: 0 2rem;
+}
+
+/* responsive */
+
+/* @media (max-width: 1024px) {
+  .header-container,
+  .create-container,
+  .get-started-container,
+  .purpose-container,
+  .information-container,
+  .revenue-calculator-container,
+  .guideline-container,
+  .account-container,
+  .start-container {
+    display: flex;
+    flex-direction: column;
+  }
+} */
