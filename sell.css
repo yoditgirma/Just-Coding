@@ -186,7 +186,7 @@ body {
   border-radius: 20px;
   padding: 5px;
   margin-bottom: 0;
-  background-image: url("../images/sell images/Green-400.svg");
+  background-image: url("./images/sell images/Green-400.svg");
   background-size: cover;
   background-position: center center;
   margin: 10px;
@@ -215,7 +215,7 @@ body {
   margin: 20px 5px;
   line-height: 1.5;
   border-radius: 20px;
-  background-image: url("../images/sell images/green-50-bg.svg");
+  background-image: url("./images/sell images/green-50-bg.svg");
   background-size: cover;
   background-position: center center;
 }
@@ -314,7 +314,7 @@ body {
 }
 
 .first-profile {
-  background-image: url("../images/sell images/off-white-light.svg");
+  background-image: url("./images/sell images/off-white-light.svg");
   margin-top: 50px;
   padding: 50px;
   margin-left: 4rem;
@@ -405,7 +405,7 @@ body {
 /* section 5 */
 
 .sec-5 {
-  background-image: url("../images/sell images/off-white.svg");
+  background-image: url("./images/sell images/off-white.svg");
   border-radius: 20px;
   margin: 5rem;
   padding: 3rem;
@@ -522,7 +522,7 @@ body {
 .img-3 {
   width: 350px;
   height: 400px;
-  background-image: url("../images/sell images/selling-plans-mockedup.webp");
+  background-image: url("./images/sell images/selling-plans-mockedup.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -533,11 +533,11 @@ body {
 }
 
 .img-2 {
-  background-image: url("../images/sell images/sellers-664220072.webp");
+  background-image: url("./images/sell images/sellers-664220072.webp");
 }
 
 .img-3 {
-  background-image: url("../images/sell images/Fulfillment_Center_Conveyor_Belt_2.webp");
+  background-image: url("./images/sell images/Fulfillment_Center_Conveyor_Belt_2.webp");
 }
 
 .space {
@@ -547,7 +547,7 @@ body {
 /* section 7 */
 
 .sec-7 {
-  background-image: url("../images/sell images/off-white.svg");
+  background-image: url("./images/sell images/off-white.svg");
   border-radius: 20px;
   margin: 5rem;
   padding: 1rem;
@@ -648,7 +648,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  background-image: url("../images/sell images/off-white.svg");
+  background-image: url("./images/sell images/off-white.svg");
   margin: 5rem;
   margin-top: 0;
   border-radius: 20px;
@@ -805,7 +805,7 @@ body {
 
 /* section 10 */
 .sec-10 {
-  background-image: url("../images/sell images/off-white.svg");
+  background-image: url("./images/sell images/off-white.svg");
   border-radius: 20px;
   margin: 5rem;
   padding: 1rem;
@@ -818,7 +818,7 @@ body {
 }
 
 .start-image {
-  background-image: url("../images/sell images/brand-prime-boxes-doorstep-delivery.webp");
+  background-image: url("./images/sell images/brand-prime-boxes-doorstep-delivery.webp");
   background-size: cover;
   background-position: bottom center;
   width: 70%;
