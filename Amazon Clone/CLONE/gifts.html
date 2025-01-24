@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<a lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon.com Gift Cards</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+    rel="icon"
+    href="../images/amazon images/small_amazon_logo.png"
+    type="image/png"
+  />
+  </head>
+  <style>
+    body {
+        /* font-family: Arial, sans-serif; */
+        margin: 0;
+        padding: 0;
+        background-color:white;
+    }
+    .navbar {
+        background-color: #ffffff;
+        padding: 10px;
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .navbar a {
+        margin: 5px 15px; /* Increased space between links */
+        text-decoration: none;
+        color: #000000;
+        font-weight: normal;
+        font-size: 12px; /* Decreased font size */
+    }
+    .navbar a:hover {
+        text-decoration: underline;
+        color: orange;
+    }
+
+    .slider {
+        width: 95%;
+        max-width: 2000px;
+        height: 300px;
+        margin: 1% auto;
+        overflow: hidden;
+        position: relative;
+        border-radius: 5px;
+        margin-bottom: 1px; /* Decreased space between slider and second navbar */
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5%;
+    }
+
+    .dot {
+        width: 13px;
+        height: 13px;
+        margin: 0 5px;
+        background-color: #ddd;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .dot.active {
+        background-color: #555;
+    }
+
+    span.next, span.prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 15px;
+        color: #eee;
+        font-size: 28px;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        user-select: none;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    span.next {
+        right: 10px;
+    }
+
+    span.prev {
+        left: 10px;
+    }
+
+    span.next:hover, span.prev:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Second Navbar Styles */
+    .second-navbar {
+        background-color: #ffffff;
+        padding: 15px;
+        display: flex;
+        justify-content:left;
+        gap: 30px; /* Increased gap between links */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .second-navbar a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px; /* Increased font size for second navbar */
+        font-weight: normal;
+    }
+
+    .second-navbar a.bold {
+        font-weight: bold;
+        font-size: 20px; /* Larger size for "Gift Cards" */
+    }
+
+    .second-navbar a:hover {
+        text-decoration: underline;
+        color: orange;
+    }
+    
+    .container1 {
+        display: flex; 
+        justify-content: center; 
+        gap: 10px; 
+        margin-top: 20px;
+        flex: 1;
+        margin: 10px;
+        
+        border-radius: 8px;
+        padding: 10px;
+       
+        text-align: center;
+        max-width: 600px; /* Set max width for columns */
+        background-color:white; /* Added background for better visibility */
+    }
+
+    .img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .container{
+        display: flex;
+         justify-content: center;
+          gap: 10px; 
+          margin-top: 20px;
+          
+    }
+    .piccd{
+       
+         height:auto; 
+         border-radius: 8px;
+         max-width: 600px;
+    }
+    .container2 {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        gap: 20px;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    }
+    .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        flex: 1;
+        min-width: 200px; /* Minimum width for cards */
+        transition: box-shadow 0.3s; /* Only transition box-shadow */
+    }
+    
+    .cla {
+        font-size: 50px; /* Larger icon size */
+        margin-bottom: 10px;
+        color: #333; /* Icon color */
+    }
+    
+    
+    
+    
+    .info-banner {
+        background-color: #eaeaea; /* Light gray background */
+        padding: 30px;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%; /* Full width */
+        max-width: 100%; /* Full width */
+        margin-top: 20px;
+    }
+    .info-banner a {
+        text-decoration: none;
+        color: black; 
+        font-weight: bold;
+    }
+    .info-banner a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+
+    
+</style>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="nav-top">      
+        <a href="index.html" class="logo">
+          <img
+            src="../images/amazon images/amazon-logo-main.png"
+            alt="Amazon logo"
+          />
+        </a>
+        <div class="nav-country">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <p>Deliver to</p>
+            <h1>Ethiopia</h1>
+          </div>
+        </div>
+        <div class="deliverOverlay">
+          <div class="overlayContent">
+            <div class="title">
+              <p class="titleText">Choose Your location</p>
+              <button class="titleButton">&times;</button>
+            </div>
+            <div class="deliveryBox">
+              <p class="deliveryBoxText">Delivery options and delivery speeds may vary for different locations</p>
+              <a href="signin.html" class="deliverySignIn" >Sign in to see your addresses</a>
+              <div class="US-text">or enter a US zip code</div>
+              <div class="deliveryApply">
+                <input type="text" class="deliveryApply-input"> 
+                <button class="deliveryApply-button">Apply</button>
+                
+              </div>
+              <div class="error-message">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                Please enter a valid US zip code
+              </div>
+              <div class="US-text">or ship outside the US</div>
+              <button class="deliveryList"><span>Ethiopia</span><i class="fa-solid fa-caret-down"></i></button>
+              <ul class="deliveryCountry">
+                <li>Afghanistan</li>
+                <li>Argentina</li>
+                <li>Australia</li>
+                <li>Austria</li>
+                <li>Bangladesh</li>
+                <li>Belgium</li>
+                <li>Brazil</li>
+                <li>Canada</li>
+                <li>China</li>
+                <li>Colombia</li>
+                <li>Denmark</li>
+                <li>Egypt</li>
+                <li>Ethiopia</li>
+                <li>Finland</li>
+                <li>France</li>
+                <li>Germany</li>
+                <li>Greece</li>
+                <li>India</li>
+                <li>Indonesia</li>
+                <li>Iran</li>
+                <li>Iraq</li>
+                <li>Ireland</li>
+                <li>Israel</li>
+                <li>Italy</li>
+                <li>Japan</li>
+                <li>Kenya</li>
+                <li>Malaysia</li>
+                <li>Mexico</li>
+                <li>Netherlands</li>
+                <li>New Zealand</li>
+                <li>Nigeria</li>
+                <li>Norway</li>
+                <li>Pakistan</li>
+                <li>Philippines</li>
+                <li>Poland</li>
+                <li>Portugal</li>
+                <li>Russia</li>
+                <li>Saudi Arabia</li>
+                <li>Singapore</li>
+                <li>South Africa</li>
+                <li>South Korea</li>
+                <li>Spain</li>
+                <li>Sweden</li>
+                <li>Switzerland</li>
+                <li>Thailand</li>
+                <li>Turkey</li>
+                <li>Ukraine</li>
+                <li>United Arab Emirates</li>
+                <li>United Kingdom</li>
+                <li>United States</li>
+              </ul>
+              <button class="done">Done</button>
+            </div>
+          </div>
+        </div>
+        <div class="nav-search">
+          <div class="nav-search-category" id="searchCategory">
+            <span>All</span>
+            <i class="fa-solid fa-caret-down"></i>
+            <ul id="dropdownMenu">
+              <li>All Departments</li>
+              <li>Arts $ Crafts</li>
+              <li>Automative</li>
+              <li>Baby</li>
+              <li>Beauty $ Personal Care</li>
+              <li>Books</li>
+              <li>Boy's Fashion</li>
+              <li>Computers</li>
+              <li>Deals</li>
+              <li>Digital Music</li>
+              <li>Electronics</li>
+              <li>Girls' Fashion</li>
+              <li>Baby</li>
+              <li>Health & Household</li>
+              <li>Home & Kitchen</li>
+              <li>Industrial & Scientific</li>
+              <li>Kindle Store</li>
+              <li>Luggage</li>
+              <li>Men's Fashion</li>
+              <li>Movies & TV</li>
+              <li>Music, CDs & Vinyl</li>
+              <li>Pet Supplies</li>
+              <li>Prime Video</li>
+              <li>Software</li>
+              <li>Sports & Outdoors</li>
+              <li>Tools & Home Improvement</li>
+              <li>Toys & Games</li>
+              <li>Video Games</li>
+              <li>Women's Fashion</li>
+            </ul>
+          </div>
+          <input
+            type="text"
+            class="nav-search-input"
+            placeholder="Search Amazon"
+          />
+          <button class="nav-search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="languageContainer">
+          <a href="#" class="nav-language">
+            <img src="../images/amazon images/us_flag.png" alt="US Flag" />
+            <p>EN</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <div class="nav-language-hover">
+            <p>Change language <a href="#" class="learn-more">Learn more</a></p>
+            <form>
+              <label>
+                <input type="radio" name="language" value="EN" checked>English - EN
+              </label>
+              <div class="line"></div>
+              <label>
+                <input type="radio" name="language" value="ES">español - ES
+              </label>
+              <label>
+                <input type="radio" name="language" value="AR">العربية - AR
+              </label>
+              <label>
+                <input type="radio" name="language" value="DE">Deutsch - DE
+              </label>
+              <label>
+                <input type="radio" name="language" value="HE">עברית - HE
+              </label>
+              <label>
+                <input type="radio" name="language" value="KO">한국어 - KO
+              </label>
+              <label>
+                <input type="radio" name="language" value="PT">português - PT
+              </label>
+              <label>
+                <input type="radio" name="language" value="ZH-Simplified">中文 (简体) - ZH
+              </label>
+              <label>
+                <input type="radio" name="language" value="ZH-Traditional">中文 (繁體) - ZH
+              </label>
+            </form>
+            <div class="bottomLine"></div>
+            <p>Change currency <a href="#" class="learn-more">Learn more</a></p>
+            <p class="change">
+                <span>$ - USD - US Dollar</span> 
+                <a href="#" class="change-link">Change</a>
+            </p>
+            <div class="bottomLine"></div>
+            <div class="shopping-region"><img src="../images/amazon images/us_flag.png" alt="US Flag" /><span>You are shopping on Amazon.com</span></div>
+            <a href="#" class="change-region">Change country/region</a>
+          </div>
+        </div>
+        <a href="#" class="nav-text-one">
+          <p>Hello, Sign in</p>
+          <h3>Account & Lists <i class="fa-solid fa-caret-down"></i></h3>
+        </a>
+        <div class="nav-text-hover">
+          <div class="nav-text-hover-top">
+            <a href="signin.html" class="signIn-hover">Sign in</a>
+            <p>New Customer? <a class="seeOffer-hover" href="signup.html">Start here</a></p>
+          </div>
+          <div class="nav-text-line"></div>
+          <div class="nav-text-content">
+            <div class="hoverSectionOne">
+              <h3>Your Lists</h3>
+              <ul>
+                <li><a href="#">Create a List</a></li>
+                <li><a href="#">Find a List or Registry</a></li>
+              </ul>
+            </div>
+            <div class="nav-text-middleLine"></div>
+            <div class="hoverSectionTwo">
+              <h3>Your Account</h3>
+              <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Recommendations</a></li>
+                <li><a href="#">Browsing History</a></li>
+                <li><a href="#">Watchlist</a></li>
+                <li><a href="#">Video Purchases & Rentals</a></li>
+                <li><a href="#">Kindle Unlimited</a></li>
+                <li><a href="#">Content & Devices</a></li>
+                <li><a href="#">Subscribe & Save Items</a></li>
+                <li><a href="#">Memberships & Subscriptions</a></li>
+                <li><a href="#">Music Library</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="signin.html" class="nav-text-two">
+          <p>Returns</p>
+          <h3>& Orders</h3>
+        </a>
+        <a href="cart.html" class="nav-cart">
+          <img src="../images/amazon images/cart_icon.png" alt="Cart" />
+          <h3>Cart</h3>
+        </a>
+      </nav>
+      <div class="nav-bottom">
+        <div class="all" id="allLink">
+          <i class="fa-solid fa-bars"></i>
+          <span>All</span>
+        </div>
+        <a href="deals.html">Today's Deals</a>
+        <a href="customerService.html">Customer Service</a>
+        <a href="registry.html">Registry</a>
+        <a href="#">Gift Cards</a>
+        <a href="sell.html">Sell</a>
+      </div>
+    </header>
+
+    <!-- Sidebar Section -->
+    <div id="sidebar" class="sidebar">
+      <a href="signin.html" class="sidebar-header">
+        <i class="fa-solid fa-user-large"></i>
+        <span>Hello, sign in</span>
+      </a>
+      <div class="sidebar-sections">
+        <!-- Digital content... -->
+        <div class="sidebar-section">
+          <h4>Digital Content & Devices</h4>
+          <ul>
+            <li class="sidebar-list">Amazon Music<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="sidebar-list">Kindle E-readers & Books<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="sidebar-list">Amazon Appstore<i class="fa-solid fa-angle-right arrow"></i></li>
+          </ul>
+        </div>
+        <!-- Shop by... -->
+        <div class="sidebar-section">
+          <h4>Shop by Department</h4>
+          <ul>
+            <li class="sidebar-list">Electronics<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="sidebar-list">Computers<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="sidebar-list">Smart Home<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="sidebar-list">Arts & Crafts<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="see-all-toggle ">See all<i class="fa-solid fa-chevron-down arrow"></i></li>
+            <div class="hidden-lists">
+              <li class="sidebar-list">Automotive<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Baby<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Beauty & Personal Care<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Women's Fashion<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Men's Fashion<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Girls' Fashion<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Boys' Fashion<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Health and Household<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Home and Kitchen<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Industrial and Scientific<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Luggage<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Movies & Television<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Pet supplies<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Software<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Sports and Outdoors<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Tools & Home Improvement<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Toys and Games<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="sidebar-list">Video Games<i class="fa-solid fa-angle-right arrow"></i></li>
+              <li class="see-less-toggle ">See less<i class="fa-solid fa-chevron-up arrow"></i></li>
+            </div>
+          </ul>
+        </div>
+        <!-- Programs &.... -->
+        <div class="sidebar-section">
+          <h4>Programs & Features</h4>
+          <ul>
+            <li class="sidebar-list">Gift Cards<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="sidebar-list">Shop By Interest<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="sidebar-list">Amazon Live<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="sidebar-list">International Shopping<i class="fa-solid fa-angle-right arrow"></i></li>
+            <li class="see-all-toggle-two">See all<i class="fa-solid fa-chevron-down arrow"></i></li>
+            <div class="hidden-lists-two">
+              <li class="sidebar-list">Amazon Second Chance</li>
+              <li class="see-less-toggle-two">See less<i class="fa-solid fa-chevron-up arrow"></i></li>
+            </div>
+          </ul>
+        </div>
+        <!-- Help &... -->
+        <div class="sidebar-section">
+          <h4>Help & Settings</h4>
+          <ul>
+            <li class="sidebar-help"><a href="#"></a>Your Account</li>
+            <li class="sidebar-help sidebar-help-LN"><i class="fa-solid fa-globe"></i>English</li>
+            <li class="sidebar-help sidebar-help-LN"><img src="../images/amazon images/us_flag.png" alt="US Flag" />United States</li>
+            <li class="sidebar-help"><a href="customerService.html"></a>Customer Service</li>
+            <li class="sidebar-help sidebar-help-last"><a href="signin.html"></a>Sign in</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="close-btn" id="closeBtn">&times;</button>
+
+    <!-- Overlay (Darkens the rest of the page when the sidebar is active) -->
+    <div id="overlay" class="overlay"></div>
+
+    <!--  -->
+    <div class="navbar">
+      <a href="#">Gift Cards</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">By Occasion</a>
+      <a href="#">Redeem Gift Cards</a>
+      <a href="#">View Your Balance</a>
+      <a href="#">Reload Your Balance</a>
+      <a href="#">By Brand</a>
+      <a href="#">For Businesses</a>
+      <a href="#">Be Informed</a>
+  </div>
+
+  <div class="slider">
+      <div class="slides">
+          <img src="./images/pic1.jpg" alt="Slide 1">
+          <img src="./images/pic2.png" alt="Slide 2">
+          <img src="./images/pic3.png" alt="Slide 3">
+          <img src="./images/pic4.png" alt="Slide 4">
+          <img src="./images/pic5.png" alt="Slide 5">
+          <img src="./images/pic6.png" alt="Slide 6">
+      </div>
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+      <div class="dots">
+          <div class="dot" data-index="0"></div>
+          <div class="dot" data-index="1"></div>
+          <div class="dot" data-index="2"></div>
+          <div class="dot" data-index="3"></div>
+          <div class="dot" data-index="4"></div>
+          <div class="dot" data-index="5"></div>
+      </div>
+  </div>
+
+  <!-- Second Navbar Below Slider -->
+  <div class="second-navbar">
+      <a href="#" class="bold">Gift Cards</a>
+      <a href="#">Amazon Gift Cards</a>
+      <a href="#">Special Gift Cards</a>
+      <a href="#">Amazon Redeem Gift Cards</a>
+      <a href="#">View Balance</a>
+      <a href="#">Amazon Reload</a>
+  </div>
+
+  <div claas="container1" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+      <div class="column">
+        <a>  <img  class="img " src="./images/pica.jpg"></a>
+      </div>
+      <div class="column">
+          <img  class="img" src="./images/picb.jpg" >
+      </div>
+  </div>
+
+  <div class="container" >
+      <div class="row2">
+          <img class="piccd" src="./images/picc.jpg" alt="Amazon Reload" >
+      </div>
+      <div class="row2">
+          <img class="piccd" src="./images/picd.jpg" alt="Amazon Gift Cards in Bulk" >
+      </div>
+  </div>
+
+  <div class="container2">
+      <div class="card">
+          <div class="icon"><img src="./images/iconc.jpg"></div> <!-- Icon for Redeem -->
+          <p style="text-decoration:underline"><strong>Redeem Amazon Gift Cards</strong></p>
+       
+      </div>
+      <div class="card">
+          <div class="icon"><img class="cla" src="./images/oconb.jpg"></div> <!-- Icon for View Balance -->
+          <p style="text-decoration:underline"><strong>View Your Balance</strong></p>
+        
+      </div>
+      <div class="card">
+          <div class="icon"><img  class="cla" src="./images/icona.jpg"></div> <!-- Icon for Auto-Reload -->
+          <p style="text-decoration:underline"><strong>Up Auto-Reload</strong> </p>
+          
+      </div>
+  </div>
+
+  <div class="info-banner">
+      <a href="#"style="margin-center: font-size:25px">Learn more about gift card scams and fraud prevention &gt;</a>
+  </div>
+
+  <h1 style="margin-left: 20px; text-align: left; color: black;">Frequently Asked Questions</h1>
+
+  <div style="margin-left: 20px; font-size: 15px;"> <!-- Added margin and increased font size -->
+      <p><strong>What can Amazon Gift Cards be redeemed towards?</strong></p>
+      <p>Amazon Gift Cards are redeemable towards the purchase of millions of eligible goods and services provided by Amazon.com or its affiliates on Amazon.com, or certain of its affiliated properties, such as smile.amazon.com. Eligible goods and services are subject to change in our sole discretion.</p>
+  
+      <p><strong>Are there any shipping costs on Amazon Gift Cards?</strong></p>
+      <p>Physical Amazon Gift Cards (except Anytime Gift Cards) are delivered with FREE One-Day shipping when you select One-Day shipping at checkout.</p>
+  
+      <p><strong>Are there any fees or expiration dates to use Amazon Gift Cards?</strong></p>
+      <p>Amazon Gift Cards have no fees and no expiration date.</p>
+  
+      <p><strong>Someone has asked me to pay them with a gift card. Is this a scam?</strong></p>
+      <p>Be wary of anyone who asks you to pay with a gift card, as this is often a scam. Never use Amazon.com Gift Cards for personal use outside of Amazon or its affiliated stores, and never use gift cards for other retailers and brands outside of their stores. Please visit this page for information if you think you have been the target of a gift card scam.</p>
+  </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="backToTop">
+        <a href="index.html">Back to top</a>
+      </div>
+      <div class="footerOne">
+        <div class="footerOneWrapper">
+          <div class="footerOneCol">
+            <h4 class="footerOne-header">Get to Know Us</h4>
+            <ul class="listOne">
+              <li class="underline">Careers</li>
+              <li class="underline">Blog</li>
+              <li class="underline">About Amazon</li>
+              <li class="underline">Investor Relations</li>
+              <li class="underline">Amazon Devices</li>
+              <li class="underline">Amazon Science</li>
+            </ul>
+          </div>
+          <div class="footerOneCol">
+            <h4 class="footerOne-header">Make Money with Us</h4>
+            <ul class="listTwo">
+              <li class="underline">Sell products on Amazon</li>
+              <li class="underline">Sell on Amazon Business</li>
+              <li class="underline">Sell apps on Amazon</li>
+              <li class="underline">Become an Affiliate</li>
+              <li class="underline">Advertise Your Products</li>
+              <li class="underline">Self-Publish with Us</li>
+              <li class="underline">Host an Amazon Hub</li>
+              <li class="underline"><span style="font-weight: 700; font-size: 15px; padding-right: 3px;">&rsaquo;</span>See More Make Money with Us</li>
+            </ul>
+          </div>
+            <div class="footerOneCol">
+              <h4 class="footerOne-header">Amazon Payment Products</h4>
+              <ul class="listThree">
+                <li class="underline">Amazon Business Card</li>
+                <li class="underline">Shop with Points</li>
+                <li class="underline">Reload Your Balance</li>
+                <li class="underline">Amazon Currency Converter</li>
+              </ul>
+            </div>
+            <div class="footerOneCol">
+              <h4 class="footerOne-header">Let Us Help You</h4>
+              <ul class="listFour">
+                <li class="underline">Amazon and COVID-19</li>
+                <li class="underline">Your Account</li>
+                <li class="underline">Your Orders</li>
+                <li class="underline">Shipping Rates & Policies</li>
+                <li class="underline">Returns & Replacements</li>
+                <li class="underline">Manage Your Content and Devices</li>
+                <li class="underline">Help</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footerTwo">
+        <div class="footerTwoWrapper">
+          <div class="footerLogo">
+            <a href="index.html" class="logo">
+              <img
+                src="../images/amazon images/amazon-logo-main.png"
+                alt="Amazon logo"
+              />
+            </a>
+          </div>
+          <div class="footerTwo-select">
+            <div class="footerTwo-select-link">
+              <a href="#" class="linkOne"><i class="fa-solid fa-globe"></i>English<i class="fa-solid fa-chevron-down down-icon"></i></a>
+            </div>
+            <div class="footerTwo-select-link">
+              <a href="#" class="linkTwo"><span>$</span> USD - U.S. Dollar</a>
+            </div>
+            <div class="footerTwo-select-link">
+              <a href="#" class="linkThree"><span><img src="../images/amazon images/us_flag.png" alt="US Flag" /></span>United States</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footerThree">
+        <div class="footerThreeWrapper">
+          <div class="footerList underline">
+            <p class="footerList-first">Amazon Music</p>
+            <p class="footerList-second">stream millions of songs</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Amazon Ads</p>
+            <p class="footerList-second">Reach customers wherever they spend their time</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">6pm</p>
+            <p class="footerList-second">Score deals on fashion brands</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">AbeBooks</p>
+            <p class="footerList-second">Books, art & collectibles</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">ACX</p>
+            <p class="footerList-second">Audiobook Publishing Made Easy</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Sell on Amazon</p>
+            <p class="footerList-second">Start a Selling Account</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Veeqo</p>
+            <p class="footerList-second">Shipping Software Inventory Management</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Amazon Business</p>
+            <p class="footerList-second">Everything For Your Business</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">AmazonGlobal</p>
+            <p class="footerList-second">Ship Orders Internationally</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Home Services</p>
+            <p class="footerList-second">Experienced Pros Happiness Guarantee</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Amazon Web Services</p>
+            <p class="footerList-second">Scalable Cloud Computing Services</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Audible</p>
+            <p class="footerList-second">Listen to Books & Original Audio Performances</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Audible</p>
+            <p class="footerList-second">stream millions of songs</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Box office Mojo</p>
+            <p class="footerList-second">Find Movie Box Office Data</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Goodreads</p>
+            <p class="footerList-second">Book reviews & recommendations</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">IMDb</p>
+            <p class="footerList-second">Movies, TV & Celebrities</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">IMDbPro</p>
+            <p class="footerList-second">Get info Entertainment Professional Need</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Kindle Direct Publishing</p>
+            <p class="footerList-second">Indie Digital & Print Publishing Made Easy</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Prime Video Direct</p>
+            <p class="footerList-second">Video Distribution Made Easy</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Shopbop</p>
+            <p class="footerList-second">Designer Fashion Brands
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Woot!</p>
+            <p class="footerList-second">Deals and Shenanigans</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Zappos</p>
+            <p class="footerList-second">Shoes & Clothing</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Ring</p>
+            <p class="footerList-second">Smart Home Security System</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">eero WiFi</p>
+            <p class="footerList-second">Stream 4K Video in Every Room</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Blink</p>
+            <p class="footerList-second">Smart Security for Every Home</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Neighbors App</p>
+            <p class="footerList-second">Real-Time Crime & Safty Alerts</p>
+          </div>
+          <div class="footerList underline">
+            <p class="footerList-first">Amazon Music</p>
+            <p class="footerList-second">stream millions of songs</p>
+          </div>
+        </div>
+        <div class="footerThree-bottom">
+          <div class="footertThree-bottom-wrapper">
+            <div class="footerThree-bottom-col">
+              <p class="footerThree-bottom-text underline">Conditions of Use</p>
+              <p class="footerThree-bottom-text underline">Privacy Notice</p>
+              <p class="footerThree-bottom-text underline">Consumer Health Data Privacy Disclosure</p>
+              <p class="footerThree-bottom-text underline">Your Ads Privacy Choices</p>
+            </div>
+            <div class="footerThree-bottom-col">
+              <p class="footerThree-bottom-text">&copy; 1996-2025, Amazon.com, Inc. or its affiliates</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <script src="script.js"></script>
+  <script>
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.dot');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const totalSlides = dots.length;
+    let currentIndex = 0;
+
+    function updateSlider() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+    }
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            currentIndex = parseInt(dot.dataset.index);
+            updateSlider();
+        });
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+    });
+
+    setInterval(autoSlide, 3000); // Change slide every 3 seconds
+
+    updateSlider(); // Initialize the slider
+</script>
+  </body>
+</html>

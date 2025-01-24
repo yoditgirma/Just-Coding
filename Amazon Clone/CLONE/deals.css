@@ -1,0 +1,311 @@
+.mini-nav {
+  z-index: 1;
+}
+.mini-nav {
+  display: flex;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  height: 33px;
+  align-items: center;
+  gap: 15px;
+  /* background-color: #fafafa; */
+  padding: 0 9px 0 15px;
+  /* margin-top: 60px; */
+}
+.mini-nav a {
+  font-size: 12px;
+  color: #333;
+  font-weight: 500;
+  padding: 11px;
+}
+.mini-nav a:nth-child(1) {
+  font-weight: bold;
+}
+.mini-nav a:hover {
+  text-decoration: underline;
+  color: #c99552;
+}
+
+/* General Styles */
+body {
+  /* margin: 0; */
+  /* font-family: Arial, sans-serif; */
+  background-color: #f8f9fa;
+}
+/* Section 1: Header */
+header {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+main {
+  margin-top: 0;
+}
+
+.sec-1 {
+  /* background-color: #6c9be6; */
+  color: black;
+  /* text-align: center; */
+  padding: 0rem;
+}
+
+.sec-1 h1 {
+  font-size: 28px;
+  margin: 0;
+  padding: 12px 16px 8px 16px;
+}
+
+/* Section 2: Deals Section */
+.sec-2 {
+  margin: 2rem;
+}
+
+.sec-2 h3 {
+  font-size: 20px;
+  margin-bottom: 4px !important;
+  /* margin-left: 16px !important; */
+  font-weight: 700 !important;
+  line-height: 28px !important;
+  letter-spacing: 0 !important;
+  color: #0f1111 !important;
+}
+
+/* Winter List Container */
+.winter_list {
+  position: relative;
+  margin: 40px;
+}
+.winter_list h3 {
+  position: relative;
+  margin: 10px;
+}
+.sec-2 h3 {
+  position: relative;
+  margin: 0px;
+  left: -50px;
+}
+.Product-slider {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  white-space: nowrap; /* Prevent wrapping of list items */
+  scroll-behavior: smooth;
+  width: 100;
+}
+
+.Product-slider {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents the items from wrapping to the next line */
+  width: 100%; /* Makes sure the container takes up the full width */
+}
+
+.Product-slider ul {
+  display: flex; /* Makes the list items display in a row */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  list-style-type: none; /* Removes bullet points */
+}
+
+.Product-slider li {
+  margin-right: 20px; /* Space between list items */
+  display: inline-block; /* Keeps the list items in one line */
+}
+
+.Product-slider::-webkit-scrollbar {
+  height: 8px; /* Adjusts the height of the scrollbar */
+}
+
+.Product-slider::-webkit-scrollbar-thumb {
+  background-color: lightblue; /* Style for the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.Product-slider::-webkit-scrollbar-track {
+  background-color: red; /* Style for the scrollbar track */
+}
+.Product-slider {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.Product-slider ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.Product-slider li {
+  margin-right: 20px;
+}
+
+.Product-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.Product-slider::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.Product-slider::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* .nomiss {
+  display: flex;
+  overflow-x: auto;
+  gap: 50px;
+  padding: 0 0 4px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.nomiss li {
+  display: inline;
+  margin-right: 20px;
+  list-style: none;
+  flex-shrink: 0;
+  width: 180px;
+} */
+
+/* .item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1rem;
+} */
+
+.item img {
+  border-radius: 8px;
+}
+.item div {
+  display: flex;
+  gap: 3rem;
+}
+.item p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+.item img {
+  display: flex;
+  gap: 3rem;
+}
+sec-2 {
+  margin: 2rem;
+}
+.List {
+  position: relative;
+  margin: 40px;
+}
+/* .item_list {
+  display: flex;
+  overflow-x: auto;
+  gap: 0px;
+  padding: 0 0 4px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.item_list li {
+  display: inline;
+  margin-right: 20px;
+  list-style: none;
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.item {
+  background-color: white;
+  border: 0px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0;
+} */
+
+.item div {
+  display: flex;
+  gap: 60px;
+}
+.item p {
+  margin: 0.5rem 0 0;
+  font-size: 15px;
+}
+
+.item img {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+li p {
+  text-align: center;
+}
+
+.item_list p {
+  text-align: center;
+}
+
+/* Scroll Buttons */
+
+/* .left-btn,
+.right-btn {
+  background-color: rgb(255, 255, 255, 0.7);
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
+  bottom: 35%;
+  position: absolute;
+  border: 3px solid transparent;
+} */
+
+/* .left-btn img,
+.right-btn img {
+  width: 20px;
+  position: relative;
+  justify-items: center; */
+/* bottom: 55px; */
+/* } */
+
+/* .left-btn img {
+  position: relative;
+  right: 5px;
+}
+
+.left-btn {
+  border-radius: 0 5px 5px 0;
+  left: -60px;
+  align-content: center;
+  border: #747272;
+} */
+
+/* .right-btn {
+  border-radius: 5px 0 0 5px;
+  right: -60px;
+  align-content: center;
+  /* bottom: 10px; */
+/* border: #747272;
+} */
+
+/* .left-btn:hover {
+  border: 1px solid black;
+}
+
+.right-btn:hover {
+  border: 1px solid black;
+}
+
+.right-btn i,
+.left-btn i {
+  color: rgb(54, 54, 54);
+  position: absolute;
+  font-size: 30px;
+  top: 35%;
+  left: 13%;
+  right: 13%;
+} */
