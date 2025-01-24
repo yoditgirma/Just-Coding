@@ -1,1 +1,203 @@
+//css of the gift card page
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    margin: 5px 15px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+.slider {
+    width: 95%;
+    max-width: 2000px;
+    height: 300px;
+    margin: 1% auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 1px; /* Decreased space between slider and second navbar */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5%;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #555;
+}
+
+span.next, span.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    color: #eee;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span.next {
+    right: 10px;
+}
+
+span.prev {
+    left: 10px;
+}
+
+span.next:hover, span.prev:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Second Navbar Styles */
+.second-navbar {
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content:left;
+    gap: 30px; /* Increased gap between links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.second-navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px; /* Increased font size for second navbar */
+    font-weight: normal;
+}
+
+.second-navbar a.bold {
+    font-weight: bold;
+    font-size: 20px; /* Larger size for "Gift Cards" */
+}
+
+.second-navbar a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+.container1 {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 20px;
+    flex: 1;
+    margin: 10px;
+    
+    border-radius: 8px;
+    padding: 10px;
+   
+    text-align: center;
+    max-width: 600px; /* Set max width for columns */
+    background-color:white; /* Added background for better visibility */
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.container{
+    display: flex;
+     justify-content: center;
+      gap: 10px; 
+      margin-top: 20px;
+      
+}
+.piccd{
+   
+     height:auto; 
+     border-radius: 8px;
+     max-width: 600px;
+}
+.container2 {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px; /* Minimum width for cards */
+    transition: box-shadow 0.3s; /* Only transition box-shadow */
+}
+
+.cla {
+    font-size: 50px; /* Larger icon size */
+    margin-bottom: 10px;
+    color: #333; /* Icon color */
+}
+.info-banner {
+    background-color: #eaeaea; /* Light gray background */
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%; /* Full width */
+    max-width: 100%; /* Full width */
+    margin-top: 20px;
+}
+.info-banner a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+}
+.info-banner a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 
