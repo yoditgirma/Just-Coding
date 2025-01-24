@@ -1,6 +1,6 @@
 # Just-Coding
 
-Title: Amazon Website Clone
+Title: Amazon Website Clone and Hangman Game
 
 Group: 5
 
