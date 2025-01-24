@@ -62,7 +62,7 @@ function updateWordDisplay() {
 // Update Hangman Drawing
 function updateHangmanDrawing() {
   const imageIndex = Math.min(wrongGuesses, maxWrongGuesses);
-  const imagePath = `assets/images/hangman_${imageIndex}.png`;
+  const imagePath = `../Asset/Images/hangman_${imageIndex}.png`;
 
   hangmanDrawing.style.backgroundImage = `url(${imagePath})`;
 }
@@ -138,9 +138,9 @@ function startNewGame() {
 }
 
 // Sound Effects
-const clickSound = new Audio("assets/sounds/click.wav");
-const winSound = new Audio("assets/sounds/win.wav");
-const loseSound = new Audio("assets/sounds/lose.wav");
+const clickSound = new Audio("../Asset/sound/click.wav");
+const winSound = new Audio("../Asset/sound/win.wav");
+const loseSound = new Audio("../Asset/sound/lose.wav");
 
 function playClickSound() {
   clickSound.currentTime = 0;
@@ -255,4 +255,3 @@ restartButton.addEventListener("click", () => {
 
 // Initialize the first game
 initializeGame();
-
